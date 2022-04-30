@@ -35,7 +35,12 @@ const Order = () => {
     return (
         <div>
             <h1>Orders</h1>
-        </div>
+            {
+                orders.map(order => <div key={order._id}>
+                    <p>{order.email}: {order.service}</p>
+                </div>)
+            }
+        </div >
     );
 };
 
