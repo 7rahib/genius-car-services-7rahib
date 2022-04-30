@@ -3,9 +3,9 @@ import { useForm } from "react-hook-form";
 
 
 const AddService = () => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
-        const url = `http://localhost:5000/service`
+        const url = `https://enigmatic-depths-52435.herokuapp.com/service`
         fetch(url, {
             method: "POST",
             headers: {
